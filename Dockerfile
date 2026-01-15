@@ -7,10 +7,17 @@ WORKDIR /app
 
 # Copy project definition
 COPY pyproject.toml .
-COPY requirements.txt .
+# COPY requirements.txt .  <-- Removed
 
 # Install dependencies
-RUN uv pip install --system -r requirements.txt || uv sync --frozen --no-cache
+# Using uv sync to install dependencies from pyproject.toml into the system or a venv
+# --system is not supported by uv sync yet, but uv pip install --system . works nicely if we want system install
+# Or we can just let uv create a venv (default) and use it.
+# Let's use uv sync which creates .venv, and then ensure PATH includes it.
+ENV VIRTUAL_ENV=/app/.venv
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+RUN uv sync --frozen --no-cache || uv sync --no-cache
 
 # Copy project code
 COPY . .

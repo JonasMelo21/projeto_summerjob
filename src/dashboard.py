@@ -31,11 +31,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 def load_data():
-    # Caminho do arquivo consolidado
+    # Caminho do arquivo MESTRE
     base_path = os.path.dirname(os.path.abspath(__file__))
-    data_path = os.path.join(base_path, '..', 'data', 'dados_consolidados_professores.csv')
+    data_path = os.path.join(base_path, '..', 'data', 'base_professores.csv')
     
     if not os.path.exists(data_path):
+        st.error(f"Arquivo não encontrado: {data_path}")
         return None
     
     df = pd.read_csv(data_path)
@@ -71,6 +72,13 @@ def main():
     else:
         selected_area = []
 
+    # Filtro de Universidade
+    if 'Universidade' in df.columns:
+        all_unis = sorted(list({str(x).strip() for x in df['Universidade'].dropna()}))
+        selected_unis = st.sidebar.multiselect("Filtrar por Universidade", options=all_unis)
+    else:
+        selected_unis = []
+
     # Aplicação dos Filtros
     df_filtered = df[df['Fit'].isin(selected_fits)]
     
@@ -78,6 +86,9 @@ def main():
         # Filtra se a area do professor contem qualquer uma das selecionadas
         mask = df_filtered['Area'].apply(lambda x: any(area in str(x) for area in selected_area))
         df_filtered = df_filtered[mask]
+
+    if selected_unis:
+         df_filtered = df_filtered[df_filtered['Universidade'].isin(selected_unis)]
 
     # Métricas
     col1, col2, col3 = st.columns(3)
@@ -98,20 +109,25 @@ def main():
         
         st.subheader("📋 Lista de Professores")
         
-        st.data_editor(
-            df_filtered,
-            column_config={
-                "Website": st.column_config.LinkColumn("Website Link", display_text="Visitar Perfil"),
-                "Justificativa": st.column_config.TextColumn("Análise da IA", width="large"),
-                "Fit": st.column_config.Column(
-                    "Nível de Compatibilidade",
-                    width="medium",
-                    help="Classificação gerada pela IA",
-                ),
-            },
+        column_config = {
+            "Website": st.column_config.LinkColumn("Website"),
+            "Justificativa": st.column_config.TextColumn("Análise LLM", width="large"),
+            "Fit": st.column_config.TextColumn("Nível de Fit", width="medium"),
+            "Professor": st.column_config.TextColumn("Professor", width="medium"),
+            "Universidade": st.column_config.TextColumn("Universidade", width="medium"),
+            "Area": st.column_config.TextColumn("Área de Pesquisa", width="medium"),
+        }
+        
+        # Reordenar colunas para ficar visualmente agradável
+        cols_order = ['Professor', 'Universidade', 'Fit', 'Area', 'Website', 'Justificativa']
+        # Garante que só usa colunas que existem
+        cols_order = [c for c in cols_order if c in df_filtered.columns]
+        
+        st.dataframe(
+            df_filtered[cols_order],
+            column_config=column_config,
             hide_index=True,
-            use_container_width=True,
-            disabled=True # Tabela apenas leitura
+            use_container_width=True
         )
         
         # Detalhes Expandidos (Opcional, para ler a justificativa completa com calma)

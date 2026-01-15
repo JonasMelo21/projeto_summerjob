@@ -22,173 +22,138 @@ def carregar_e_processar_dados():
     if not verificar_env():
         return
 
-    # Define o caminho para a pasta 'data'
     base_path = os.path.dirname(os.path.abspath(__file__))
     data_path = os.path.join(base_path, '..', 'data')
+    master_csv = os.path.join(data_path, 'base_professores.csv')
     
-    arquivos_csv = glob.glob(os.path.join(data_path, '*.csv'))
-    
-    if not arquivos_csv:
-        print(f"⚠️  Nenhum arquivo CSV encontrado em: {os.path.abspath(data_path)}")
+    # 1. Carrega ou Cria a Base Mestra
+    if os.path.exists(master_csv):
+        df_master = pd.read_csv(master_csv)
+        print(f"✅ Base de dados carregada: {len(df_master)} professores.")
+    else:
+        print("⚠️ Base de dados não encontrada. Execute src/migrate_to_master.py primeiro ou certifique-se que o arquivo existe.")
         return
 
-    print(f"✅ Encontrados {len(arquivos_csv)} arquivos. Iniciando processamento...\n")
+    # 2. Verifica se há arquivos de 'novos' para processar (Opcional - Fluxo de Ingestão)
+    # Por enquanto, vamos assumir que queremos processar o que está FALTANDO na base mestra
+    # ou se o usuário adicionar um arquivo 'novos_professores.csv', nós mesclamos.
+    
+    arquivos_novos = glob.glob(os.path.join(data_path, 'novos_*.csv'))
+    if arquivos_novos:
+        print(f"📥 Encontrados {len(arquivos_novos)} arquivos de novos dados para ingestão.")
+        dfs_novos = []
+        for f in arquivos_novos:
+            try:
+                df_temp = pd.read_csv(f)
+                # Normalização básica de colunas
+                col_map = {c: c.capitalize() for c in df_temp.columns} # Ex: website -> Website
+                df_temp = df_temp.rename(columns=col_map)
+                dfs_novos.append(df_temp)
+            except: pass
+            
+        if dfs_novos:
+            df_novos = pd.concat(dfs_novos)
+            # Mescla com a master, removendo duplicatas pelo Website
+            df_combined = pd.concat([df_master, df_novos])
+            
+            # Remove duplicatas (mantendo o que já tinhamos na master preferencialmente, ou o novo se atualizar)
+            # Vamos manter o que tem mais informação. Se o da master já tem FIT, mantem a master.
+            # Lógica simplificada: Drop duplicates pelo Website
+            df_combined = df_combined.drop_duplicates(subset=['Website'], keep='first')
+            
+            if len(df_combined) > len(df_master):
+                print(f"➕ Adicionados {len(df_combined) - len(df_master)} novos professores à base.")
+                df_master = df_combined
+                df_master.to_csv(master_csv, index=False) # Salva estado atualizado
+    
+    # 3. Identifica processamento pendente na Base Mestra
+    # Critério: Fit é NaN ou vazio E Website é válido
+    # Garante colunas
+    if 'Fit' not in df_master.columns: df_master['Fit'] = None
+    if 'Justificativa' not in df_master.columns: df_master['Justificativa'] = None
 
-    for arquivo in arquivos_csv:
-        # Pula arquivos que não são os originais e já foram consolidados
-        if 'dados_consolidados' in arquivo:
+    # Função auxiliar para verificar se precisa processar
+    def precisa_analisar(row):
+        fit = str(row['Fit']).strip().lower()
+        if fit in ['nan', 'none', '', 'erro']:
+            return True
+        return False
+
+    mask_pendentes = df_master.apply(precisa_analisar, axis=1)
+    df_pendentes = df_master[mask_pendentes]
+    
+    if df_pendentes.empty:
+        print("🎉 Todos os professores da base já foram analisados!")
+        return
+
+    print(f"🔨 Iniciando análise para {len(df_pendentes)} professores pendentes...\n")
+    
+    alteracoes = False
+    total = len(df_pendentes)
+    
+    # Itera apenas sobre os pendentes
+    for count, (index, row) in enumerate(df_pendentes.iterrows()):
+        site = row['Website']
+        nome = row.get('Professor', 'Desconhecido')
+        
+        print(f"[{count+1}/{total}] Analisando {nome}...", end='\r')
+        
+        if pd.isna(site) or "http" not in str(site):
+            print(f"\n   ⏩ Pulo: URL inválida ({site})")
             continue
 
-        nome_arquivo = os.path.basename(arquivo)
-        print(f"--- Processando: {nome_arquivo} ---")
-        try:
-            df = pd.read_csv(arquivo)
-            
-            # Normalizar nome das colunas (remover espaços, etc)
-            df.columns = df.columns.str.strip()
-            
-            # Verifica se colunas necessárias existem ('Website')
-            coluna_site = None
-            for col in df.columns:
-                if col.lower() == 'website':
-                    coluna_site = col
-                    break
-            
-            if not coluna_site:
-                print(f"⚠️  Arquivo {nome_arquivo} ignorado: Coluna 'Website' não encontrada.")
-                continue
-
-            # Garante que as colunas de saída existam
-            if 'fit' not in df.columns:
-                df['fit'] = None
-            if 'analise_llm' not in df.columns:
-                df['analise_llm'] = None
-
-            alteracoes = False
-            total_linhas = len(df)
-            
-            for index, row in df.iterrows():
-                site = row[coluna_site]
-                
-                # Barra de progresso visual simples no terminal
-                print(f"[{index+1}/{total_linhas}] Analisando {row.get('Nome', 'Professor')}...", end='\r')
-                
-                # Se já tem fit preenchido, pula
-                # Adicionei filtro para "Erro" -> Se deu erro antes, tenta de novo
-                current_fit = str(row['fit']).strip() if pd.notna(row['fit']) else ""
-                
-                if current_fit and current_fit not in ["", "nan", "None", "Erro"]:
-                     continue
-                
-                if pd.isna(site) or not isinstance(site, str) or "http" not in site:
-                    # Só loga se não for nulo/vazio silencioso
-                    if pd.notna(site):
-                        print(f"\n   ⏩ Pulo: URL inválida ({site})")
-                    continue
-
-                # print(f"\n   🔍 Scraping: {site} ...") # Comentado para poluir menos, descomente para debug
-                texto_site = scrape_website(site)
-                
-                if not texto_site:
-                    print(f"\n      ⚠️ Falha ao ler site: {site}")
-                    df.at[index, 'analise_llm'] = "Erro ao acessar site"
-                    df.at[index, 'fit'] = "Erro"
-                    alteracoes = True
-                    continue
-                
-                # print("      🧠 Analisando com Gemini...")
-                relatorio, fit_categoria = analyze_profile(texto_site)
-                
-                # Se retornou erro da API, mostramos no terminal
-                if fit_categoria == "Erro":
-                   print(f"\n      ❌ Erro na API do Gemini para {site}")
-                
-                df.at[index, 'analise_llm'] = relatorio
-                df.at[index, 'fit'] = fit_categoria
-                alteracoes = True
-                # print(f"      ✅ Resultado: {fit_categoria}")
-
-            print("") # Pula linha após o loop
-            if alteracoes:
-                # Salva o arquivo atualizado
-                df.to_csv(arquivo, index=False)
-                print(f"💾 Arquivo {nome_arquivo} atualizado com sucesso!\n")
-            else:
-                print(f"Distribuição de dados não alterada para {nome_arquivo}.\n")
-            
-        except Exception as e:
-            print(f"❌ Erro ao processar {nome_arquivo}: {e}")
-            logging.exception("Detalhes do erro:")
-    
-    # --- Nova Etapa: Consolidar Resultados ---
-    consolidar_resultados(data_path)
-
-def consolidar_resultados(data_path):
-    print("\n📦 Consolidando resultados em um único arquivo...")
-    try:
-        arquivos_csv = glob.glob(os.path.join(data_path, '*.csv'))
-        dfs = []
+        texto_site = scrape_website(site)
         
-        for arquivo in arquivos_csv:
-            # Ignora o próprio arquivo de resumo se ele já existir para não duplicar
-            if 'dados_consolidados_professores.csv' in arquivo:
-                continue
-                
+        if not texto_site:
+            print(f"\n   ⚠️ Falha ao ler site: {site}")
+            df_master.at[index, 'Justificativa'] = "Erro ao acessar site"
+            df_master.at[index, 'Fit'] = "Erro"
+            alteracoes = True
             try:
-                df = pd.read_csv(arquivo)
-                df.columns = df.columns.str.strip() # Normaliza colunas
-                
-                # Seleciona apenas colunas de interesse (normalizando nomes se necessário)
-                # Vamos tentar encontrar as colunas independente de case
-                col_map = {c.lower(): c for c in df.columns}
-                
-                cols_desired = {
-                    'nome': 'Professor',
-                    'area': 'Area',
-                    'website': 'Website',
-                    'fit': 'Fit',
-                    'analise_llm': 'Justificativa'
-                }
-                
-                df_temp = pd.DataFrame()
-                
-                for key, target_name in cols_desired.items():
-                    if key in col_map:
-                        df_temp[target_name] = df[col_map[key]]
-                    else:
-                        df_temp[target_name] = None
-                        
-                # Adiciona apenas se tiver 'Fit' preenchido (opcional, mas o user quer "os que tenho fit")
-                # Mas vamos pegar todos para o dashboard filtrar
-                dfs.append(df_temp)
-                
-            except Exception as e:
-                print(f"Erro ao ler {arquivo} para consolidação: {e}")
+                df_master.to_csv(master_csv, index=False)
+            except: pass
+            continue
+        
+        try:
+            relatorio, fit_categoria = analyze_profile(texto_site)
+        except Exception as e:
+            err_str = str(e).lower()
+            if "429" in err_str or "quota" in err_str or "resource exhausted" in err_str:
+                print(f"\n✋ Cota excedida detectada! Salvando progresso e parando o script.")
+                df_master.to_csv(master_csv, index=False)
+                return # Encerra o processamento
+            else:
+                print(f"\n   ❌ Erro inesperado ao analisar perfil: {e}")
+                relatorio = f"Erro na análise: {e}"
+                fit_categoria = "Erro"
+        
+        if fit_categoria == "Erro":
+            print(f"\n   ❌ Erro na API do Gemini para {site}")
+            # Se deu erro no Gemini, também queremos salvar o status de erro se ele retornou algo
+        
+        df_master.at[index, 'Justificativa'] = relatorio
+        df_master.at[index, 'Fit'] = fit_categoria
+        alteracoes = True
 
-        if dfs:
-            df_final = pd.concat(dfs, ignore_index=True)
-            
-            # Ordenar por Fit (opcional)
-            # Vamos criar uma coluna numérica auxiliar para ordenação
-            fit_order = {
-                "Fit Muito Alto": 0,
-                "Fit Alto": 1,
-                "Fit Baixo": 2,
-                "Fit Muito Baixo": 3,
-                "Erro": 99,
-                "N/A": 99
-            }
-            df_final['rank'] = df_final['Fit'].map(fit_order).fillna(99)
-            df_final = df_final.sort_values('rank').drop('rank', axis=1)
-            
-            output_path = os.path.join(data_path, 'dados_consolidados_professores.csv')
-            df_final.to_csv(output_path, index=False)
-            print(f"✅ Arquivo consolidado criado em: {os.path.abspath(output_path)}")
-        else:
-            print("⚠️ Nenhum dado para consolidar.")
-            
-    except Exception as e:
-        print(f"❌ Erro na consolidação: {e}")
+        # SALVAMENTO INCREMENTAL (Segurança contra falhas/Ctrl+C)
+        try:
+            df_master.to_csv(master_csv, index=False)
+            # print(f"      💾 Progresso salvo.")
+        except Exception as save_err:
+            print(f"      ❌ Erro ao salvar progresso: {save_err}")
+        
+        # Delay (Rate Limit)
+        import time
+        time.sleep(10) # Aumentei de 5 pra 10 pra dar mais fôlego à conta free
+
+    print("")
+    if alteracoes:
+        df_master.to_csv(master_csv, index=False)
+        print(f"💾 Base de dados atualizada com sucesso: {master_csv}")
+    
+    # Não precisa mais consolidar, pois já trabalhamos na base única
+
+# Função consolidar removida pois obsoleta
 
 if __name__ == "__main__":
     carregar_e_processar_dados()

@@ -55,25 +55,46 @@ Responda de forma direta.
 
     # Tenta usar um modelo mais recente (Flash é mais rápido e economico, 1.5 Pro é mais robusto)
     # Atualizado com modelos disponíveis no log do usuário (2.0/2.5 e Latest)
-    model_candidates = ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-flash-latest', 'gemini-pro']
+    model_candidates = [
+        # Modelos Lite/Flash (Geralmente mais rápidos e com cotas melhores)
+        'gemini-2.5-flash-lite',
+        'gemini-2.0-flash-lite-preview-02-05',
+        'gemini-flash-lite-latest',
+        'gemini-3-flash-preview',
+        'gemini-2.5-flash',
+        
+        # Modelos Standard/Pro
+        'gemini-2.0-flash', 
+        'gemini-flash-latest',
+        'gemini-1.5-flash',
+        
+        # Modelos Alternativos (Gemma/Outros Previews)
+        'gemma-3-27b-it',
+        'gemini-3-pro-preview',
+    ]
     
     response = None
     last_error = None
 
     for model_name in model_candidates:
         try:
-            # logging.info(f"Tentando usar modelo: {model_name}")
             model = genai.GenerativeModel(model_name)
             
-            # Rate limit handling check
-            time.sleep(1)
-            
+            # Executa diretamente sem retries (pedida do usuário para falhar rápido em caso de cota)
             response = model.generate_content(prompt_avaliacao)
-            break # Se sucesso, sai do loop
+            break # Sucesso, sai do loop de modelos
             
         except Exception as e:
             last_error = e
-            # logging.warning(f"Falha ao usar modelo {model_name}: {str(e)}")
+            err_str = str(e).lower()
+            
+            # Se for erro de cota (429), propaga o erro imediatamente para parar o script
+            if "429" in err_str or "quota" in err_str or "resource exhausted" in err_str:
+                logging.error(f"❌ Cota excedida no modelo {model_name}. Interrompendo script imediatamente.")
+                raise e
+            
+            # Outros erros (ex: modelo não encontrado, erro interno), tenta o próximo modelo
+            logging.warning(f"Falha ao usar modelo {model_name}: {str(e)}")
             continue
 
     if not response:
@@ -92,8 +113,10 @@ Responda de forma direta.
         text_response = response.text
         
         # Extrair a classificação final de forma simples
-        fit_category = "N/A"
+        fit_category = "Fit Baixo" # Valor default conservador se a IA falhar na formatação
         lower_resp = text_response.lower()
+        
+        # Ordem importa: verificar "muito" antes do simples
         if "fit muito alto" in lower_resp:
             fit_category = "Fit Muito Alto"
         elif "fit alto" in lower_resp:

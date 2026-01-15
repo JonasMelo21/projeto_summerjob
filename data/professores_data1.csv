@@ -1,40 +1,316 @@
 Nome,Applications Summer/Winterjob,Area,University,Website,email,fit,analise_llm
-Maryam Mehri ,,"Numerical Analysis, HPC,ML",U of Toronto,https://www.cs.toronto.edu/~mmehride/index.html,mailto:mmehride@cs.toronto.edu  ou mmehride@gmail.com,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+Maryam Mehri ,,"Numerical Analysis, HPC,ML",U of Toronto,https://www.cs.toronto.edu/~mmehride/index.html,mailto:mmehride@cs.toronto.edu  ou mmehride@gmail.com,Fit Baixo,"Aqui está a avaliação de Job Fit:
+
+1.  **Score de Compatibilidade:** 35%
+
+2.  **Pontos Fortes (Match):**
+    *   **Forte Base Matemática:** O candidato possui uma excelente fundamentação em Cálculo, Álgebra Linear, Matemática Aplicada e Cálculo Numérico, que é crucial para qualquer pesquisa avançada em Ciência da Computação, Machine Learning e otimização.
+    *   **Conhecimentos em Otimização:** A familiaridade com Pesquisa Operacional e Otimização (Método Simplex) pode ser tangencialmente relevante para a otimização de algoritmos ou sistemas em ambientes paralelos/distribuídos, embora não seja um match direto.
+    *   **Foco Teórico em ML:** O interesse e estudo aprofundado nos fundamentos teóricos e matemáticos dos algoritmos de ML (Andrew Ng, ISLP) demonstram uma mentalidade acadêmica e de pesquisa que é positiva para um ambiente universitário.
+    *   **Experiência em ML Engineering:** A experiência como estagiário em Machine Learning Engineering é uma base sólida em uma área relacionada à pesquisa da professora.
+
+3.  **Gaps (Lacunas):**
+    *   **Ausência de Compatibilidade com ""Parallel and Distributed Computing"":** A principal lacuna é a falta de qualquer menção a experiência, conhecimento ou interesse em ""Parallel and Distributed Computing"", que é a área explícita de pesquisa da Professora Dehnavi e reforçada por seu título de ""Canada Research Chair"" e afiliação com NVIDIA.
+    *   **Foco em Implementação x Otimização de Arquitetura:** O perfil do candidato inclina-se para os fundamentos dos algoritmos de ML e pipelines de dados (Engenharia de Dados), mas não demonstra foco na otimização de performance, arquiteturas de computação (GPUs), ou desafios de escalabilidade e distribuição de sistemas, que são centrais para a área da professora.
+    *   **Nenhuma Referência a HPC/GPUs:** Não há indicação de familiaridade com High-Performance Computing (HPC) ou programação de GPUs, que seriam esperadas dada a afiliação da professora com NVIDIA.
+
+4.  **Veredito:** O candidato apresenta um perfil forte em fundamentos matemáticos e teóricos de Machine Learning, além de experiência prática relevante em ML e Engenharia de Dados. Contudo, há uma desconexão significativa com a área de pesquisa central da Professora Dehnavi, que é ""Parallel and Distributed Computing"". A falta de experiência ou interesse explícito nessa área, juntamente com a ausência de menção a HPC, GPUs ou sistemas distribuídos, impede um alinhamento direto com o foco do laboratório, apesar da qualidade geral do candidato.
+
+5.  **Classificação Final:** Fit Baixo"
 "Christina C. Christara
-",,"Numerical Analysis, HPC",U of Toronto,https://www.cs.toronto.edu/~ccc/,ccc@cs.toronto.edu,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Wayne Enright,,Numerical Analysis,U of Toronto,https://www.cs.toronto.edu/~enright/index.html,enright@cs.toronto.edu,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+",,"Numerical Analysis, HPC",U of Toronto,https://www.cs.toronto.edu/~ccc/,ccc@cs.toronto.edu,Fit Alto,"Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, avaliei o perfil do candidato em relação aos interesses de pesquisa da Professora Christina C. Christara.
+
+---
+
+**1. Score de Compatibilidade (0-100%):** 78%
+
+---
+
+**2. Pontos Fortes (Match):**
+
+*   **Base Matemática Sólida:** O domínio em Cálculo, Álgebra Linear, Matemática Aplicada e Cálculo Numérico é um alinhamento direto e fundamental com a especialização da Professora Christara em computação científica, matemática computacional e métodos numéricos.
+*   **Conhecimento em Otimização:** A experiência avançada em Pesquisa Operacional (Método Simplex, Otimização) casa perfeitamente com os interesses da professora em ""Numerical Methods for Optimization Problems"" e a otimização inerente a muitos algoritmos numéricos e problemas de engenharia.
+*   **Abordagem Teórica de Algoritmos:** O foco do candidato nos ""fundamentos teóricos e matemáticos dos algoritmos"" de ML, e seus estudos em ""Introduction to Statistical Learning"", reflete a mentalidade rigorosa e analítica necessária para a pesquisa em análise numérica e computação científica.
+*   **Potencial de Aprendizado:** Dada a forte base teórica, o candidato possui uma capacidade robusta para aprender as aplicações específicas (como PDEs em finanças) e as ferramentas necessárias (HPC/paralelismo) para a área de pesquisa da professora.
+
+---
+
+**3. Gaps (Lacunas):**
+
+*   **Experiência Direta em PDEs/Finanças:** O perfil não demonstra experiência ou conhecimento aprofundado em Equações Diferenciais Parciais (EDPs), modelagem financeira ou precificação de derivativos, que são áreas centrais das publicações da professora.
+*   **High Performance Computing (HPC) e Computação Paralela:** Não há menção explícita de experiência em HPC, programação paralela (ex: MPI, OpenMP) ou uso de GPUs, aspectos proeminentes na pesquisa da professora, especialmente em suas publicações mais recentes.
+*   **Desenvolvimento de Software Matemático:** A experiência do candidato se inclina mais para a aplicação de frameworks de ML e DE existentes, em vez do desenvolvimento de ""Mathematical Software"" do zero, que é um interesse declarado da professora.
+*   **Machine Learning vs. Métodos Numéricos:** Embora o candidato tenha um background em ML, a pesquisa da professora não é focada em Machine Learning no sentido de modelos preditivos tradicionais. A integração da experiência em ML do candidato com a pesquisa da professora exigiria uma ponte conceitual (ex: uso de técnicas de ML para otimização de solvers numéricos ou surrogate modeling), o que não está explícito no perfil.
+
+---
+
+**4. Veredito:**
+
+O candidato apresenta um alinhamento excepcional com a base teórica e matemática da área de pesquisa da Professora Christara. Sua solidez em cálculo, álgebra linear, métodos numéricos e otimização constitui um alicerce ideal para ingressar em um campo como a computação científica. Embora existam lacunas em áreas de aplicação muito específicas (EDPs aplicadas a finanças) e em tecnologias de implementação avançadas (HPC/GPUs), a capacidade demonstrada de absorção de conhecimento teórico e a paixão por fundamentos algorítmicos sugerem um alto potencial de sucesso nesse ambiente. A experiência em ML, embora não seja um match direto de tópico, pode ser vista como um diferencial que traz uma perspectiva de análise de dados e otimização para problemas computacionais complexos.
+
+---
+
+**5. Classificação Final:** Fit Alto"
+Wayne Enright,,Numerical Analysis,U of Toronto,https://www.cs.toronto.edu/~enright/index.html,enright@cs.toronto.edu,Fit Alto,"Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, avalio o perfil do candidato em relação aos interesses de pesquisa do Professor Wayne Enright.
+
+---
+
+**1. Score de Compatibilidade:** 80%
+
+**2. Pontos Fortes (Match):**
+
+*   **Base Matemática:** O candidato possui uma base matemática robusta (Cálculo, Álgebra Linear, Matemática Aplicada, **Cálculo Numérico**), que é o pilar da área de pesquisa do Professor Enright (""Numerical Analysis and Scientific Computing""). O conhecimento explícito em Cálculo Numérico é um ""match"" direto e fundamental.
+*   **Abordagem Teórica/Fundamental:** O foco do candidato nos fundamentos teóricos e matemáticos dos algoritmos de ML, e o estudo aprofundado de literatura como ""Introduction to Statistical Learning"", demonstram uma mentalidade analítica e um interesse em entender ""como e porquê"" as coisas funcionam, o que é essencial para o desenvolvimento de métodos numéricos confiáveis.
+*   **Habilidade de Otimização:** Conhecimentos avançados em Pesquisa Operacional e Otimização são complementares à análise numérica, pois muitas vezes envolvem a busca por soluções eficientes para problemas matemáticos complexos.
+
+**3. Gaps (Lacunas):**
+
+*   **Domínio Específico:** Embora a base seja sólida, o candidato não demonstra experiência ou estudo explícito em ""Ordinary Differential Equations (ODEs)"" e ""Integro-Differential Equations (IDEs)"", que são o foco principal da pesquisa do professor.
+*   **Experiência Prática em Pesquisa Numérica:** A experiência profissional do candidato é em Engenharia de Dados e Engenharia de Machine Learning, que são áreas mais aplicadas e focadas em desenvolvimento, e não diretamente em pesquisa e desenvolvimento de ""reliable numerical methods"" ou ""numerical software"" no contexto específico do professor.
+*   **Falta de Projetos de Pesquisa Direta:** Não há menção a projetos de pesquisa acadêmica focados em análise numérica ou métodos diferenciais, apenas aplicação de ML e data engineering.
+
+**4. Veredito:**
+O candidato possui uma fundação matemática e um interesse teórico excepcionais que se alinham perfeitamente com a área de **Análise Numérica e Computação Científica** do Professor Enright. Embora falte experiência direta com ODEs/IDEs e pesquisa em métodos numéricos, sua forte base teórica e aptidão para estudos fundamentais sugerem um potencial muito alto para adquirir rapidamente o conhecimento específico necessário e contribuir para o grupo de pesquisa. As lacunas são mais sobre o domínio de aplicação específico e experiência prática em pesquisa, que podem ser preenchidas através de um projeto de pesquisa ou mestrado/doutorado com o professor.
+
+**5. Classificação Final:** Fit Alto"
 "Kenneth R. Jackson
-",,Numerical Analysis,U of Toronto,https://www.cs.toronto.edu/~krj/,kj@cs.utoronto.ca,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Laurent Demanet,,"Numerical Analysis,Sci comp ",MIT,https://math.mit.edu/icg/people/laurent.html,laurent@math,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-L N Trefethen ,,Numerical Analysis,Harvard,https://people.maths.ox.ac.uk/trefethen/,trefethen@seas.harvard.edu,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+",,Numerical Analysis,U of Toronto,https://www.cs.toronto.edu/~krj/,kj@cs.utoronto.ca,Fit Alto,"Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, avalio o ""Job Fit"" da seguinte forma:
+
+1.  **Score de Compatibilidade (0-100%):** 70%
+
+2.  **Pontos Fortes (Match):**
+    *   **Forte Base Matemática e Numérica:** A formação do candidato em Cálculo, Álgebra Linear, Matemática Aplicada e, especialmente, Cálculo Numérico, alinha-se perfeitamente com o foco primário do Professor Jackson em ""numerical computation"" e ""scientific computing"".
+    *   **Conhecimentos em Pesquisa Operacional e Otimização:** A expertise avançada em Pesquisa Operacional (Método Simplex, Otimização) é um ponto forte, considerando que o professor ministra cursos como ""Numerical Methods for Optimization Problems"" e seus interesses incluem a solução de equações lineares e não lineares.
+    *   **Foco Teórico/Matemático em ML:** A dedicação do candidato aos ""fundamentos teóricos e matemáticos dos algoritmos"" de Machine Learning demonstra uma mentalidade de profundidade e rigor que é altamente compatível com a abordagem acadêmica do professor em métodos numéricos e suas bases.
+    *   **Potencial em Computational Finance:** O interesse do Professor Jackson em ""computational finance"" e sua associação com programas de Masters of Mathematical Finance oferecem um ponto de interseção direto e promissor, dado o forte background matemático do candidato.
+    *   **Estudo de ISLP:** A leitura de ""Introduction to Statistical Learning"" com aplicação em Python mostra familiaridade com métodos estatísticos e sua implementação, que são tangenciais, mas complementares, à pesquisa em análise numérica.
+
+3.  **Gaps (Lacunas):**
+    *   **Experiência Direta em EDOs/EDPs:** O candidato não demonstra experiência ou interesse explícito na resolução numérica de Equações Diferenciais Ordinárias (EDOs) e Parciais (EDPs), que é a área central e histórica da pesquisa do Professor Jackson.
+    *   **Foco Específico em Machine Learning/Engenharia de Dados (Industrial):** Embora a experiência em ML Engineering e Data Engineering seja valiosa, ela se refere mais ao desenvolvimento e operacionalização de modelos de ML e pipelines de dados em um contexto tipicamente industrial. A pesquisa do professor é mais focada na matemática subjacente e na computação numérica para problemas científicos e de engenharia, e não na construção de sistemas de ML no sentido mais amplo.
+    *   **Domínios de Aplicação:** Além de finanças computacionais, o candidato não menciona experiência ou interesse nos outros domínios de aplicação do professor, como imageamento médico, redes reguladoras genéticas, previsão do tempo ou modelagem climática/qualidade do ar.
+    *   **Computação Paralela e Software Matemático:** Não há menção explícita de experiência em computação paralela ou desenvolvimento de software matemático, que são áreas de interesse do professor.
+
+4.  **Veredito:**
+    O candidato possui uma base fundamental em matemática e cálculo numérico excepcional, que é o cerne da pesquisa do Professor Jackson. Seu foco em compreender os fundamentos teóricos e matemáticos de algoritmos é uma grande vantagem para um ambiente de pesquisa acadêmica em computação numérica. A área de finanças computacionais oferece um claro potencial de colaboração. Embora haja lacunas no conhecimento específico de EDOs/EDPs e em outras áreas de aplicação do professor, a força da base teórica do candidato e sua mentalidade analítica sugerem uma alta capacidade de aprender e se adaptar rapidamente a esses domínios especializados. O ""fit"" é mais forte na fundação e na abordagem teórica do que na experiência de domínio específico atual.
+
+5.  **Classificação Final:** Fit Alto"
+Laurent Demanet,,"Numerical Analysis,Sci comp ",MIT,https://math.mit.edu/icg/people/laurent.html,laurent@math,Fit Alto,"Olá! Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, avaliei cuidadosamente o perfil do candidato em relação aos interesses de pesquisa do Professor Laurent Demanet.
+
+Aqui está a minha análise:
+
+---
+
+1.  **Score de Compatibilidade (0-100%):** 80%
+
+2.  **Pontos Fortes (Match):**
+    *   **Base Matemática Sólida:** A fortíssima base do candidato em Cálculo, Álgebra Linear, Matemática Aplicada e Cálculo Numérico é um alinhamento quase perfeito com o campo de ""Applied Mathematics"" do professor, seus interesses em ""applied analysis"" e ""scientific computing"", e o foco em ""mathematical and numerical challenges"".
+    *   **Foco Teórico em ML:** O interesse do candidato nos ""fundamentos teóricos e matemáticos dos algoritmos"" de ML complementa diretamente o interesse do professor em ""machine learning"", especialmente dentro de um departamento de Matemática Aplicada. Isso sugere que o candidato busca uma compreensão profunda, e não apenas o uso de bibliotecas prontas.
+    *   **Pesquisa Operacional (Otimização):** Conhecimentos avançados em Otimização podem ser muito relevantes para a resolução de ""inverse problems"" e para o desenvolvimento de métodos numéricos, que são áreas de interesse central do professor.
+    *   **Background Acadêmico Similar:** O professor tem formação em engenharia matemática e física teórica, o que indica uma mentalidade e abordagem de problemas que se alinha muito bem com a forte base teórica do candidato.
+
+3.  **Gaps (Lacunas):**
+    *   **Domínio Específico (Ondas e Inversos):** O candidato não demonstra experiência ou interesse explícito em ""inverse problems"" ou ""wave propagation"", que são os temas de pesquisa mais específicos do grupo do professor. Embora a base matemática seja ideal para aprender esses tópicos, a falta de exposição prévia representa uma lacuna inicial.
+    *   **Aplicações Geofísicas:** A atuação do professor no Departamento de Earth, Atmospheric, and Planetary Sciences e como Diretor do Earth Resources Laboratory sugere aplicações em geofísica e ciências da terra. O perfil do candidato, embora forte teoricamente, não indica experiência ou interesse nesses domínios aplicados.
+    *   **Experiência em Pesquisa Avançada:** Embora o candidato esteja estudando ML teoricamente, ele não apresenta, explicitamente, experiência em pesquisa acadêmica avançada ou contribuições para esses tópicos específicos, além dos estudos autodidatas e cursos introdutórios.
+
+4.  **Veredito:**
+    O candidato possui um alinhamento excepcional na base teórica e metodológica que é o pilar do trabalho do Professor Demanet. Sua profundidade em matemática e seu foco nos fundamentos do Machine Learning o tornam um forte candidato para um ambiente que valoriza a compreensão ""do zero"". As lacunas residem principalmente nos domínios de aplicação específicos (problemas inversos, propagação de ondas, geofísica), que são, no entanto, áreas onde sua forte base matemática pode ser rapidamente aplicada e desenvolvida sob orientação. Há um alto potencial de ""treinabilidade"" e adaptação a esses domínios.
+
+5.  **Classificação Final:** Fit Alto"
+L N Trefethen ,,Numerical Analysis,Harvard,https://people.maths.ox.ac.uk/trefethen/,trefethen@seas.harvard.edu,Fit Alto,"Aqui está a avaliação do Job Fit:
+
+1.  **Score de Compatibilidade (0-100%):** 85%
+
+2.  **Pontos Fortes (Match):**
+    *   **Forte Base em Matemática Aplicada e Numérica:** A formação em Cálculo, Álgebra Linear, Matemática Aplicada e, principalmente, Cálculo Numérico, alinha-se perfeitamente com a especialização do Professor Trefethen em ""Applied Mathematics"" e ""Numerical Analysis"".
+    *   **Foco nos Fundamentos Teóricos de ML:** O interesse do candidato em estudar os fundamentos teóricos e matemáticos dos algoritmos de Machine Learning é um match direto com a abordagem rigorosa esperada em pesquisa de matemática aplicada.
+    *   **Conhecimentos em Otimização:** A bagagem em Pesquisa Operacional, incluindo otimização, é altamente relevante para a matemática aplicada e para o desenvolvimento de muitos algoritmos em ML e análise numérica.
+    *   **Potencial de Aprendizado e Rigor:** O perfil demonstra um interesse genuíno e uma capacidade de mergulhar nas bases teóricas, o que é crucial para colaborar com um professor focado em pesquisa fundamental.
+
+3.  **Gaps (Lacunas):**
+    *   **Experiência Direta em Pesquisa Acadêmica Específica:** Embora a base teórica seja excelente, o perfil não detalha experiência em projetos de pesquisa acadêmica diretamente alinhados com as ferramentas ou métodos específicos desenvolvidos pelo professor (e.g., Chebfun, Lightning Laplace solver) ou publicações científicas.
+    *   **Transição de Engenharia para Pesquisa Pura:** As experiências como estagiário em ML Engineering e Data Engineering são valiosas, mas indicam um foco mais em aplicação prática e construção de pipelines. O trabalho do professor é mais focado no desenvolvimento de *novos* métodos e na análise teórica profunda, o que exige uma mentalidade de pesquisa mais pura.
+
+4.  **Veredito:** O candidato possui uma base teórica e um *mindset* excepcionalmente alinhados com o campo de atuação do Professor Trefethen. A profundidade em matemática aplicada e cálculo numérico, combinada com o interesse nos fundamentos matemáticos de ML, o torna um candidato com um potencial muito elevado para contribuir e se desenvolver sob a orientação do professor, especialmente em um ambiente de pesquisa. As lacunas estão mais relacionadas à experiência prática em pesquisa acadêmica específica, que pode ser rapidamente mitigada dada a sólida fundação e o interesse demonstrado.
+
+5.  **Classificação Final:** Fit Alto"
 Xiao-Wen Chang,,Numerical Linear Algebra and Optimization,McGill,,mailto:chang@cs.mcgill.ca,,
-Chen Greif,,Numerical Linear ALgebra,British Columbia,,mailto:greif@cs.ubc.ca,very high,
-Michael Friedlander,,Numerical optimization and linear algebra,British Collumbia,,mailto:mpf@cs.ubc.ca,high,
-Uri Ascher,,Numerical Computations,British Collumbia,,ascher@cs.ubc.ca,very high,
+Chen Greif,,Numerical Linear ALgebra,British Columbia,,mailto:greif@cs.ubc.ca,,
+Michael Friedlander,,Numerical optimization and linear algebra,British Collumbia,,mailto:mpf@cs.ubc.ca,,
+Uri Ascher,,Numerical Computations,British Collumbia,,ascher@cs.ubc.ca,,
 Dinesh Pai,,"ML, Numeric Computing",British Collumbia,,mailto:pai@cs.ubc.ca,,
-Toshiya Hachisuka,," include computer graphics, light transport simulation, computational statistics, and numerical analysis ",Waterloo,https://cs.uwaterloo.ca/~thachisu/,mailto:toshiya.hachisuka@uwaterloo.ca,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Justin Wan,Sem título (https://www.notion.so/27f8dc4937a78038b4eacce98031cd64?pvs=21),"AI,ML,Medcine,Numerial computing",Waterloo,https://cs.uwaterloo.ca/~jwlwan/,mailto:justin.wan@uwaterloo.ca,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Dr. Wenyuan Liao,,Numerical methods,Calgary,https://profiles.ucalgary.ca/wenyuan-liao,wliao@ucalgary.ca,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Tony Ware,,Numerical analysis,Calgary,https://profiles.ucalgary.ca/tony-ware,aware@ucalgary.ca,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Coralia Cartis,,"Numerical Analysis, DS ML",Oxford,https://people.maths.ox.ac.uk/cartis/,coralia.cartis@maths.ox.ac.uk,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-David Casperson,,Computational Algebra,,https://www.unbc.ca/people/casperson-dr-david,,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Shahadat Hossain,,"Matrizes esparsas, otimização",,,,high,
-"Dobrowolski, Dr. Edward",,Numerical computing,UNBC,https://www.unbc.ca/people/el-smaily-dr-mohammad,,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Dr. Wendy Huang,,Optimization/Operational Research,,https://whuang.lakeheadu.ca/WendyHome.html,,high,
-Liping Liu,,Numerical Analysis/ Operational Research,,https://www.lakeheadu.ca/users/L/lipingli/,,high,
+Toshiya Hachisuka,," include computer graphics, light transport simulation, computational statistics, and numerical analysis ",Waterloo,https://cs.uwaterloo.ca/~thachisu/,mailto:toshiya.hachisuka@uwaterloo.ca,Fit Baixo,"Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, avalio o Job Fit da seguinte forma:
+
+1.  **Score de Compatibilidade:** 35%
+
+2.  **Pontos Fortes (Match):**
+    *   **Forte Base Matemática:** O candidato possui uma base matemática robusta (Cálculo, Álgebra Linear, Matemática Aplicada, Cálculo Numérico) que é fundamental para a pesquisa do professor, que envolve ""Numerical analysis"", ""Computational mathematics"" e ""Scientific computation"".
+    *   **Conhecimentos em Pesquisa Operacional (Otimização):** O domínio de otimização pode ser tangencialmente útil em certas abordagens numéricas e de simulação presentes nas publicações do professor (ex: otimização de algoritmos de rendering).
+    *   **Interesse em Fundamentos Teóricos de ML e Estatística:** O foco do candidato nos fundamentos teóricos e matemáticos de algoritmos de ML, juntamente com o estudo de ""Introduction to Statistical Learning"", pode fornecer uma base sólida para compreender os métodos Monte Carlo e as estatísticas computacionais avançadas frequentemente empregados na pesquisa do professor.
+
+3.  **Gaps (Lacunas):**
+    *   **Ausência de Experiência/Interesse em Gráficos Computacionais/Renderização:** Este é o maior e mais crítico gap. O perfil do candidato não demonstra nenhum interesse prévio ou experiência em Computer Graphics, Rendering, Light Transport Simulation ou Physics Simulation, que são os pilares da pesquisa do Professor Hachisuka. O professor é explícito ao solicitar interesse em ""rendering or relevant subjects within computer graphics"".
+    *   **Foco Inespecífico de Machine Learning:** Embora o candidato tenha experiência em ML Engineering e estude os fundamentos, não há indicação de como esse conhecimento se alinha ou pode ser aplicado especificamente aos problemas de gráficos e simulação que o professor aborda (ex: denoising em rendering, síntese de imagens, etc.). O trabalho do professor parece mais focado em métodos numéricos e Monte Carlo para problemas de física/gráficos do que em abordagens típicas de Deep Learning para dados genéricos.
+    *   **Experiência em Engenharia de Dados (ETL, Pipelines):** A experiência anterior em Engenharia de Dados, com foco em pipelines e ETL, tem pouca ou nenhuma relevância direta para a pesquisa acadêmica em Computer Graphics e simulação do professor.
+
+4.  **Veredito:**
+    O candidato apresenta uma excelente base matemática e teórica que é um pré-requisito valioso para a pesquisa avançada do Professor Hachisuka em ""Numerical Analysis"" e ""Computational Statistics"". No entanto, a **falta de alinhamento com a área central de Gráficos Computacionais e Renderização** é uma lacuna fundamental. O professor busca explicitamente um interesse concreto em ""rendering or relevant subjects within computer graphics"", algo que não é evidenciado no perfil do candidato. Sem um interesse e, idealmente, alguma experiência (mesmo que em projetos pessoais) nessa área específica, a base matemática, por si só, é insuficiente para um ""Job Fit"" adequado para uma posição no grupo de pesquisa.
+
+5.  **Classificação Final:** Fit Baixo"
+Justin Wan,Sem título (https://www.notion.so/27f8dc4937a78038b4eacce98031cd64?pvs=21),"AI,ML,Medcine,Numerial computing",Waterloo,https://cs.uwaterloo.ca/~jwlwan/,mailto:justin.wan@uwaterloo.ca,Fit Muito Alto,"**1. Score de Compatibilidade:** 90%
+
+**2. Pontos Fortes (Match):**
+*   **Fundamentação Teórica Sólida:** A base matemática avançada do candidato (Cálculo, Álgebra Linear, Matemática Aplicada e Cálculo Numérico) alinha-se perfeitamente com a área de ""Scientific Computing"" e os interesses em ""Mathematical Modelling and Numerical Computation"" do Professor Wan (PhD em Applied Math).
+*   **Foco em Fundamentos de ML:** O interesse do candidato nos fundamentos teóricos e matemáticos dos algoritmos de Machine Learning complementa diretamente a pesquisa do professor em ""Machine Learning and Neural Network model for financial applications"".
+*   **Conhecimento em Pesquisa Operacional/Otimização:** A expertise em Pesquisa Operacional (Método Simplex, Teoria das Filas, Otimização) é altamente relevante para o desenvolvimento de ""efficient numerical techniques"" e para problemas em finanças, como ""option pricing"" e ""hedging parameters"", que frequentemente envolvem otimização.
+*   **Experiência Prática em Engenharia:** A experiência como Estagiário em Machine Learning Engineering e Engenharia de Dados (pipelines, ETL) indica capacidade de implementar soluções e trabalhar com dados, o que é crucial para traduzir modelos teóricos em aplicações robustas e eficientes. A aplicação de ISLP em Python reforça esta capacidade prática.
+
+**3. Gaps (Lacunas):**
+*   **Domínio de Aplicação Específico:** Embora a base seja forte, o candidato não demonstra experiência direta ou interesse explícito nos domínios de aplicação específicos do professor (processamento de imagens médicas, simulação de gráficos computacionais, finanças quantitativas aprofundadas além da parte de ML). No entanto, a forte base teórica sugere alta adaptabilidade.
+*   **Conhecimento em Técnicas Numéricas Avançadas:** Embora possua ""Cálculo Numérico"", o perfil não detalha o nível de familiaridade com as ""advanced, robust and efficient numerical techniques"" específicas que o Professor Wan desenvolve em Scientific Computing (e.g., métodos de elementos finitos, métodos espectrais, resolvedores de PDEs complexos).
+
+**4. Veredito:**
+Este candidato apresenta um alinhamento excepcional com o perfil de pesquisa do Professor Justin Wan. Sua robusta formação em matemática aplicada, combinada com um foco intenso nos fundamentos teóricos de Machine Learning e experiência prática em engenharia, o torna um candidato ideal para projetos em Scientific Computing, especialmente aqueles que envolvem ML, modelagem numérica e otimização para aplicações em diversas áreas. As lacunas são mais relacionadas a domínios de aplicação específicos, que podem ser preenchidas rapidamente dada a sua sólida base teórica e capacidade de aprendizado demonstrada.
+
+**5. Classificação Final:** Fit Muito Alto"
+Dr. Wenyuan Liao,,Numerical methods,Calgary,https://profiles.ucalgary.ca/wenyuan-liao,wliao@ucalgary.ca,Fit Alto,"Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, minha avaliação é a seguinte:
+
+1.  **Score de Compatibilidade (0-100%):** 65%
+
+2.  **Pontos Fortes (Match):**
+    *   **Base Matemática Sólida:** O domínio em Cálculo, Álgebra Linear, Matemática Aplicada e, principalmente, Cálculo Numérico é um alinhamento excepcional com o foco do professor em métodos numéricos para PDEs, computação científica e problemas inversos.
+    *   **Fundamentos Teóricos de ML:** A dedicação aos fundamentos teóricos e matemáticos de algoritmos de Machine Learning (Andrew Ng, ISLP) é um excelente ponto de partida para a linha de pesquisa do professor em ""Deep Neural Networks Method for PDEs and Inverse Problems"".
+    *   **Habilidades Práticas em Python:** A aplicação do ISLP em Python demonstra capacidade de implementação prática, o que é relevante para o desenvolvimento de algoritmos e pacotes de software usando TensorFlow/PyTorch, conforme mencionado pelo professor.
+
+3.  **Gaps (Lacunas):**
+    *   **Domínio Específico:** Ausência de experiência explícita ou conhecimento aprofundado em inversão de forma de onda (Full Waveform Inversion), sismologia, imagens médicas ou geofísica, que são centrais para a pesquisa do professor.
+    *   **Aplicações Avançadas de PDEs:** Embora a base matemática seja forte, não há menção de experiência direta com a solução numérica de PDEs, esquemas de alta ordem, modelos de ordem fracionária ou problemas inversos restritos por PDE em um contexto de pesquisa aplicada.
+    *   **Deep Learning para Problemas Científicos:** A experiência em ML é mais generalista nos fundamentos; falta evidência de aplicação específica de DNNs para resolver PDEs ou problemas inversos no contexto da computação científica.
+    *   **Computação de Alto Desempenho (HPC):** Não há menção de experiência ou conhecimento em computação de alto desempenho, uma das áreas de pesquisa do professor.
+    *   **Experiência Profissional Direta:** As experiências de estágio em MLE e Engenharia de Dados, embora valiosas, não se alinham diretamente com a profundidade e especificidade das metodologias e domínios de pesquisa do Dr. Liao.
+
+4.  **Veredito:** O candidato demonstra um potencial promissor devido à sua robusta base matemática e ao interesse aprofundado nos fundamentos teóricos de Machine Learning, elementos cruciais para a pesquisa do Dr. Wenyuan Liao. No entanto, há uma necessidade clara de desenvolvimento e imersão em conhecimentos específicos do domínio (geofísica, medicina) e técnicas avançadas (Full Waveform Inversion, HPC, aplicação de DNNs para PDEs) que são o cerne do trabalho do professor. A curva de aprendizado será acentuada, mas a base sólida sugere que o candidato tem a capacidade de preencher essas lacunas.
+
+5.  **Classificação Final:** Fit Alto"
+Tony Ware,,Numerical analysis,Calgary,https://profiles.ucalgary.ca/tony-ware,aware@ucalgary.ca,Fit Muito Alto,"**1. Score de Compatibilidade (0-100%):** 90%
+
+**2. Pontos Fortes (Match):**
+*   **Base Matemática Profunda:** A sólida formação do candidato em Cálculo, Álgebra Linear, Matemática Aplicada e, crucialmente, Cálculo Numérico, é um match direto com a área principal de pesquisa do professor em Numerical Analysis e seu departamento de Matemática e Estatística.
+*   **Expertise em Otimização e Pesquisa Operacional:** Os conhecimentos avançados do candidato em Otimização, Método Simplex e Teoria das Filas alinham-se perfeitamente com a vasta produção do professor em Computational Finance e Portfolio Selection, áreas que dependem fortemente de otimização matemática e modelagem quantitativa.
+*   **Foco Teórico em ML:** O interesse do candidato nos fundamentos teóricos e matemáticos dos algoritmos de Machine Learning (via Andrew Ng e ISLP) espelha a abordagem fundamentalmente matemática e analítica da pesquisa do professor. Embora ""Machine Learning"" não seja um termo explícito, o trabalho em ""Semi-parametric time series modelling"" e as bases de estatística e otimização são o cerne do ML.
+*   **Experiência Prática (ML Engineering/Data Engineering):** A experiência como estagiário em ML Engineering e Data Engineering demonstra a capacidade do candidato de implementar e trabalhar com dados em larga escala, o que é um ativo valioso mesmo em um contexto de pesquisa mais teórica, fornecendo ponte entre teoria e aplicação.
+
+**3. Gaps (Lacunas):**
+*   **Domínios Específicos de PDEs e Métodos Numéricos:** Embora o candidato tenha Cálculo Numérico, não há menção explícita de experiência ou interesse em Equações Diferenciais Parciais (PDEs) como Navier-Stokes ou nos métodos numéricos muito específicos (e.g., spectral Lagrange-Galerkin) presentes nas publicações do professor. Contudo, a forte base matemática sugere alta capacidade de aprendizado rápido.
+*   **Áreas de Aplicação Específicas:** As menções a ""Biomedical applications of mathematics"" e ""Wavelets"" como áreas de pesquisa do professor não encontram correspondência direta no perfil do candidato, embora a base matemática possa ser transferível.
+*   **Terminologia ""Machine Learning"" Explícita:** O professor não lista ""Machine Learning"" como uma área de pesquisa explícita, o que poderia ser uma pequena lacuna em termos de foco direto na área do candidato, apesar da forte sobreposição conceitual.
+
+**4. Veredito:**
+O candidato demonstra um alinhamento excepcional com os fundamentos teóricos e matemáticos da pesquisa do Professor Antony Ware, especialmente nas áreas de Análise Numérica e Finanças Computacionais/Otimização. Sua paixão pelos fundamentos do ML e sua experiência prática complementam perfeitamente o rigor acadêmico do professor. As lacunas são principalmente em domínios altamente especializados, que são superáveis dada a forte base teórica do candidato.
+
+**5. Classificação Final:** Fit Muito Alto"
+Coralia Cartis,,"Numerical Analysis, DS ML",Oxford,https://people.maths.ox.ac.uk/cartis/,coralia.cartis@maths.ox.ac.uk,Fit Muito Alto,"Aqui está a avaliação de compatibilidade:
+
+1.  **Score de Compatibilidade (0-100%):** 90%
+2.  **Pontos Fortes (Match):**
+    *   **Otimização Numérica:** O perfil do candidato demonstra forte conhecimento em ""Pesquisa Operacional"" e ""Otimização"" (Método Simplex), além de ""Cálculo Numérico"", o que casa diretamente com a especialidade da professora em ""Numerical Optimization"" e sua afiliação ao ""Numerical Analysis Group"".
+    *   **Base Matemática:** A sólida formação do candidato em Cálculo, Álgebra Linear e Matemática Aplicada é fundamental para a área de Otimização e para um ambiente no ""Mathematical Institute"".
+    *   **Fundamentos de ML:** Embora a professora não mencione explicitamente ML, o foco do candidato nos fundamentos teóricos e matemáticos dos algoritmos de Machine Learning é altamente complementar, visto que a otimização é o pilar de grande parte dos modelos de ML.
+3.  **Gaps (Lacunas):**
+    *   **Especificidade das Aplicações:** O site da professora é conciso e não detalha as aplicações específicas de sua pesquisa em otimização. Não fica claro se ela atua diretamente com aplicações em Data Science, Machine Learning aplicado, ou se seu foco é puramente na otimização teórica/algorítmica.
+    *   **Engenharia de Dados (Foco):** A experiência anterior em Engenharia de Dados (pipelines, ETL) não é um ponto central de compatibilidade, embora seja uma habilidade valiosa em um contexto de pesquisa que envolva dados e implementação.
+4.  **Veredito:** Há um alinhamento excepcional nos fundamentos teóricos e matemáticos, especialmente na área de Otimização Numérica. O candidato possui as bases conceituais exatas para se destacar no ambiente de pesquisa da Dra. Cartis, com o adicional de um interesse profundo nos fundamentos de Machine Learning, que se integra bem com o campo da otimização. A principal lacuna é a ausência de detalhes sobre as aplicações do trabalho da professora.
+5.  **Classificação Final:** Fit Muito Alto"
+David Casperson,,Computational Algebra,,https://www.unbc.ca/people/casperson-dr-david,,Fit Muito Baixo,"Aqui está a avaliação do ""Job Fit"":
+
+**1. Score de Compatibilidade (0-100%):** 15%
+
+**2. Pontos Fortes (Match):**
+*   **Forte Base Matemática:** Ambos possuem uma base matemática robusta e apreciam os fundamentos teóricos. O candidato tem forte base em Cálculo, Álgebra Linear e Matemática Aplicada/Numérica, e o professor tem PhD e MMath em Matemática Pura.
+*   **Interesse em Fundamentos:** O candidato busca os fundamentos teóricos e matemáticos de algoritmos de ML, e o professor lida com fundamentos em suas áreas de pesquisa (ex: programação language semantics, algebra).
+*   **Linguagens de Programação:** Há uma sobreposição potencial em linguagens como C++ e Java, que são comuns.
+
+**3. Gaps (Lacunas):**
+*   **Áreas de Pesquisa:** A principal e mais significativa lacuna. O candidato está profundamente focado em Machine Learning, Engenharia de Dados e Otimização (Pesquisa Operacional) para fins de ML. As áreas de pesquisa do professor são Álgebra Computacional, Teoria de Galois, Álgebra Universal e Semântica de Linguagens de Programação, que são campos distintos da Matemática Pura e Ciência da Computação teórica, sem menção explícita ou implícita a Machine Learning, Data Science, Estatística Aplicada ou AI.
+*   **Natureza da Matemática:** Embora ambos fortes em matemática, o candidato se inclina para a matemática *aplicada e numérica* para resolver problemas de ML/Otimização, enquanto o professor foca em matemática *pura e abstrata* em suas pesquisas.
+*   **Ferramentas e Ecossistema:** O candidato provavelmente utiliza Python para ML (ISLP com Python), enquanto o professor lista linguagens como Standard ML, Haskell e Aldor, que são menos comuns no contexto de Machine Learning e mais alinhadas com sua pesquisa em semântica de linguagens.
+
+**4. Veredito:**
+O candidato possui um perfil acadêmico e técnico sólido, com uma base matemática forte e um foco claro em Machine Learning e Engenharia de Dados. No entanto, as áreas de pesquisa do Dr. Casperson são fundamentalmente distintas, centrando-se em Matemática Pura e Ciência da Computação teórica, sem qualquer indicação de interesse ou trabalho em Machine Learning ou Data Science. A incompatibilidade nas áreas de interesse de pesquisa é substancial, tornando o fit muito baixo para uma posição de pesquisa diretamente ligada ao trabalho do professor.
+
+**5. Classificação Final:** Fit Muito Baixo"
+Shahadat Hossain,,"Matrizes esparsas, otimização",,,,,
+"Dobrowolski, Dr. Edward",,Numerical computing,UNBC,https://www.unbc.ca/people/el-smaily-dr-mohammad,,Fit Muito Baixo,"Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, avaliei o perfil do candidato em relação aos interesses de pesquisa do Dr. Mohammad El Smaily.
+
+---
+
+1.  **Score de Compatibilidade:** 15%
+
+2.  **Pontos Fortes (Match):**
+    *   **Forte Base Matemática:** O candidato possui uma base robusta em Cálculo, Álgebra Linear, Matemática Aplicada e Cálculo Numérico, que são pré-requisitos fundamentais para estudos avançados em matemática, incluindo as áreas do professor.
+    *   **Interesse em Fundamentos Teóricos:** O foco do candidato nos fundamentos teóricos e matemáticos dos algoritmos de ML demonstra uma aptidão para abordagens mais rigorosas e conceituais, o que é essencial na pesquisa matemática.
+
+3.  **Gaps (Lacunas):**
+    *   **Foco Específico em Pesquisa:** O Dr. El Smaily é altamente especializado em Equações Diferenciais Parciais (PDE), Análise Não Linear, Análise Funcional, Teoria Espectral e suas aplicações em dinâmica populacional/biologia matemática através de modelos baseados em PDE. O candidato não demonstra conhecimento ou interesse explícito nessas áreas centrais.
+    *   **Discrepância nas Ferramentas e Metodologias:** Enquanto o candidato foca em ML (algoritmos estatísticos) e Engenharia de Dados (pipelines, ETL), o professor utiliza ferramentas analíticas de matemática pura e aplicada (teoria de PDE, análise funcional) para a análise rigorosa de modelos, não para o desenvolvimento de modelos de dados ou pipelines.
+    *   **Experiência Prática:** A experiência como estagiário em Engenharia de Machine Learning e Engenharia de Dados, embora valiosa no setor de tecnologia, não se alinha diretamente com a natureza teórica e de modelagem matemática do trabalho do professor. Os cursos de ML (Andrew Ng, ISLP) são focados em estatística e aprendizado de máquina, não em PDE ou sistemas dinâmicos.
+    *   **Pesquisa Operacional:** Embora ""Otimização"" seja uma área do candidato, as técnicas de Pesquisa Operacional (Simplex, Teoria das Filas) geralmente divergem das técnicas de otimização e análise usadas em PDE e Análise Não Linear.
+
+4.  **Veredito:**
+    O candidato possui uma excelente base matemática geral e uma inclinação para os fundamentos teóricos, o que é admirável. No entanto, o foco de sua experiência profissional e estudos atuais em Machine Learning (especialmente algoritmos estatísticos) e Engenharia de Dados está significativamente desalinhado com a área de pesquisa altamente especializada do Dr. El Smaily em Equações Diferenciais Parciais e Análise Não Linear. Embora a capacidade de aprendizado seja presumida, não há evidências de interesse direto ou conhecimento prévio nas áreas específicas de pesquisa do professor, tornando o fit para um papel de pesquisa (especialmente como estudante de pós-graduação) muito baixo neste momento.
+
+5.  **Classificação Final:** Fit Muito Baixo"
+Dr. Wendy Huang,,Optimization/Operational Research,,https://whuang.lakeheadu.ca/WendyHome.html,,,
+Liping Liu,,Numerical Analysis/ Operational Research,,https://www.lakeheadu.ca/users/L/lipingli/,,,
 ,,,,,,,
-Angèle Foley,,"Discrete Math, Matrix, Graphs",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/angele-foley/index.html,,high,
-Azam Asilian Bidgoli,,"AI,ML,Optimization",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/azam-asilian-bidgoli/index.html,mailto:abidgoli@wlu.ca,very high,
-Bernard Chiu,,"AI,ML, Biomedics",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/bernard-chiu/index.html,,low,
+Angèle Foley,,"Discrete Math, Matrix, Graphs",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/angele-foley/index.html,,,
+Azam Asilian Bidgoli,,"AI,ML,Optimization",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/azam-asilian-bidgoli/index.html,mailto:abidgoli@wlu.ca,,
+Bernard Chiu,,"AI,ML, Biomedics",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/bernard-chiu/index.html,,,
 ,,,,,,,
-Chính T. Hoàng,,Graphs and Algorithms,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/chinh-t-hoang/index.html,,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Dariush Ebrahimi,,"intelligent transportation systems (ITS), working on data communications, traffic management, routing, and charging of electric vehicles",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/dariush-ebrahimi/index.html,,Erro,"Erro na análise (Todos modelos falharam): 404 models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
-Emad Mohammed,,ML and Medicine,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/emad-mohammed/index.html,,low,
-Eugene Zima,,Numerical Computing,,,,high,
-Hasan Shodiev,,"Diverse, Networks",,,,low,
-Heider Ali,,"AI,ML,Biomedical",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/heider-ali/index.html,,low,
-Ilias S. Kotsireas,,Numerical Computing,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/ilias-s-kotsireas/index.html,,high,
-Kathie Cameron,,"Graphs and Algorithms, Discrete maths",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/kathie-cameron/index.html,,high,
-Connell McCluskey,,Numerical Computing,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/connell-mccluskey/index.html,,low,
-Mathew Aibinu,,Numerical Computing,,https://www.uregina.ca/science/mathstat/directory/postdoc/mathew-aibinu.html,mailto:Mathew.Aibinu@uregina.ca,low,
-Chun-Hua Guo,,Numerical Computing,,https://www.uregina.ca/science/mathstat/directory/faculty/chun-hua-guo.html,,low,
+Chính T. Hoàng,,Graphs and Algorithms,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/chinh-t-hoang/index.html,,Fit Baixo,"Como um Recrutador Técnico Sênior e Especialista em Carreira de Dados, avaliei a compatibilidade entre o perfil do candidato e a área de pesquisa do Professor Chính T. Hoàng.
+
+---
+
+**Score de Compatibilidade:** 35%
+
+**Pontos Fortes (Match):**
+*   **Forte Base Matemática:** A sólida formação em Cálculo, Álgebra Linear, Matemática Aplicada e Cálculo Numérico é um excelente pilar para qualquer pesquisa teórica em ciência da computação ou otimização.
+*   **Conhecimentos em Pesquisa Operacional e Otimização:** O foco em Otimização, incluindo Método Simplex e Teoria das Filas, pode ter interfaces com os ""problemas de otimização"" em grafos que o professor estuda, como mencionado em suas publicações (""Maximum Weight Stable Set Problem"", ""Optimizing weakly triangulated graphs"").
+*   **Interesse em Fundamentos Teóricos:** O foco do candidato nos fundamentos teóricos e matemáticos dos algoritmos (mesmo que para ML) demonstra uma mentalidade investigativa e de base, que é valiosa em pesquisa acadêmica.
+
+**Gaps (Lacunas):**
+*   **Domínio Específico:** O principal gap é a ausência de experiência ou interesse explícito em Teoria dos Grafos, Algoritmos de Grafos e Matemática Discreta, que são o *core* absoluto da pesquisa do Professor Hoàng. O professor busca ""structured graph theory and algorithms on graphs"", ""NP-complete and polynomial-time solvable graph recognition and optimization problems"" e ""algorithmic graph theory"".
+*   **Foco Prático vs. Teórico (Área):** A experiência profissional do candidato em Machine Learning Engineering e Engenharia de Dados, embora valiosa no mercado, é predominantemente de aplicação e construção de sistemas, enquanto a pesquisa do professor é profundamente teórica em Ciência da Computação.
+*   **Alinhamento dos Estudos Atuais:** Os estudos em ML (Andrew Ng, ISLP) são fundamentais para Machine Learning, mas não se alinham diretamente com a especificidade da pesquisa do professor em complexidade algorítmica e estruturas de grafos.
+
+**Veredito:**
+O candidato possui uma excelente base matemática e um interesse genuíno nos fundamentos teóricos de algoritmos, o que é um ponto de partida promissor. Contudo, há uma lacuna significativa no domínio específico de Teoria dos Grafos, Algoritmos de Grafos e Matemática Discreta, que é o foco central e explícito da pesquisa do Professor Chính T. Hoàng. Para este estágio de pesquisa, o professor busca estudantes já interessados e com alguma base nessas áreas específicas. Sem um pivô claro do candidato para esse domínio ou uma ponte explícita do professor para tópicos que unam ML e Teoria dos Grafos (o que não é evidente em seu perfil), a compatibilidade é limitada.
+
+**Classificação Final:** Fit Baixo"
+Dariush Ebrahimi,,"intelligent transportation systems (ITS), working on data communications, traffic management, routing, and charging of electric vehicles",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/dariush-ebrahimi/index.html,,Fit Muito Alto,"Como Recrutador Técnico Sênior e Especialista em Carreira de Dados, a avaliação do perfil do candidato em relação às áreas de pesquisa do Professor Dariush Ebrahimi é a seguinte:
+
+1.  **Score de Compatibilidade (0-100%):** 95%
+
+2.  **Pontos Fortes (Match):**
+    *   **Otimização e Pesquisa Operacional:** O ponto mais forte e de maior compatibilidade. O vasto conhecimento do candidato em Pesquisa Operacional (Simplex, Teoria das Filas, Otimização) e a forte base matemática (Cálculo, Álgebra Linear, Matemática Aplicada, Cálculo Numérico) alinham-se perfeitamente com a área de especialização do professor em ""Algorithm Design & Optimization"". Isso é crucial para os projetos atuais do professor focados em ""traffic management, routing, and charging of electric vehicles"", bem como teses de alunos sobre ""Optimizing Electric Vehicle Charging"", ""Path Planning"", ""Workload Scheduling"" e uso de Reinforcement Learning para otimização.
+    *   **Fundamentos Teóricos de ML:** O foco do candidato nos fundamentos teóricos e matemáticos de algoritmos de Machine Learning (Andrew Ng, ISLP) é um excelente match para projetos de pesquisa que envolvem Deep Reinforcement Learning e outras técnicas avançadas de ML aplicadas a ITS e IoT, como visto nas teses dos alunos (""Implementing Reinforcement Learning Algorithms"", ""Vehicle-Assisted RSU Caching Using Deep Reinforcement Learning"").
+    *   **Engenharia de Dados e Big Data:** A experiência anterior como Estagiário em Engenharia de Dados (pipelines, ETL) é altamente relevante para a área de expertise do professor em ""Data Mining and Big Data"", garantindo que o candidato tem a base para lidar com os volumes de dados gerados em sistemas de transporte inteligente e IoT.
+    *   **Habilidades Aplicáveis:** Embora o candidato não mencione experiência direta em ""Intelligent Transportation Systems (ITS)"" ou ""Internet of Things (IoT)"", suas habilidades em ML, Otimização e Engenharia de Dados são diretamente aplicáveis e altamente valorizadas nestes domínios de pesquisa.
+
+3.  **Gaps (Lacunas):**
+    *   **Experiência Direta em Domínios Específicos:** O perfil não detalha experiência prática ou projetos específicos em Intelligent Transportation Systems (ITS), Internet of Things (IoT), Wireless Communications, ou Cloud/Edge Computing. A experiência é em Engenharia de ML e Dados de forma mais genérica.
+    *   **Deep Learning/Reinforcement Learning Específico:** Embora o candidato esteja estudando os fundamentos de ML, não há menção explícita de projetos ou estudos aprofundados em Deep Learning ou Reinforcement Learning, que são bastante presentes nas publicações e projetos do professor. Contudo, a base para aprender é sólida.
+
+4.  **Veredito:** O perfil do candidato apresenta uma compatibilidade excepcionalmente alta com os interesses de pesquisa do Professor Dariush Ebrahimi. A combinação de uma formação matemática e em Pesquisa Operacional robusta com o interesse em fundamentos de Machine Learning e experiência em engenharia de dados cria uma sinergia poderosa. As habilidades de otimização do candidato são um diferencial espetacular e diretamente aplicáveis a diversos projetos do professor, especialmente aqueles focados em ITS, veículos elétricos e gerenciamento de recursos. O candidato demonstra o rigor teórico e a capacidade de aplicação necessários para um ambiente de pesquisa de pós-graduação.
+
+5.  **Classificação Final:** Fit Muito Alto"
+Emad Mohammed,,ML and Medicine,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/emad-mohammed/index.html,,,
+Eugene Zima,,Numerical Computing,,,,,
+Hasan Shodiev,,"Diverse, Networks",,,,,
+Heider Ali,,"AI,ML,Biomedical",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/heider-ali/index.html,,,
+Ilias S. Kotsireas,,Numerical Computing,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/ilias-s-kotsireas/index.html,,,
+Kathie Cameron,,"Graphs and Algorithms, Discrete maths",,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/kathie-cameron/index.html,,,
+Connell McCluskey,,Numerical Computing,,https://www.wlu.ca/academics/faculties/faculty-of-science/faculty-profiles/connell-mccluskey/index.html,,,
+Mathew Aibinu,,Numerical Computing,,https://www.uregina.ca/science/mathstat/directory/postdoc/mathew-aibinu.html,mailto:Mathew.Aibinu@uregina.ca,,
+Chun-Hua Guo,,Numerical Computing,,https://www.uregina.ca/science/mathstat/directory/faculty/chun-hua-guo.html,,,

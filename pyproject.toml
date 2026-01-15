@@ -6,7 +6,12 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "streamlit>=1.30.0",
-    "pandas>=2.0.0"
+    "pandas>=2.0.0",
+    "numpy",
+    "requests",
+    "beautifulsoup4",
+    "python-dotenv",
+    "google-generativeai"
 ]
 
 [tool.uv]
